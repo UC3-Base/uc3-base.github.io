@@ -1,6 +1,6 @@
 # 🚀 Web Oficial UC3-BASE
 
-Plataforma web oficial de **UC3-BASE**, la asociación de estudiantes de ingeniería espacial, cohetería y radiofrecuencia de la Universidad Carlos III de Madrid (Campus de Leganés).
+HOLAPlataforma web oficial de **UC3-BASE**, la asociación de estudiantes de ingeniería espacial, cohetería y radiofrecuencia de la Universidad Carlos III de Madrid (Campus de Leganés).
 
 Este repositorio contiene el código fuente del sitio web, diseñado con una estética "Dark Future / Space Engineering" y optimizado para ser responsivo e interactivo.
 
