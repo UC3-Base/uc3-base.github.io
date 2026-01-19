@@ -1622,16 +1622,22 @@ form input:focus, form textarea:focus {
 }
 
 /* Botones del Hero */
+/* Busca .botones-hero y déjalo así: */
 .botones-hero {
     display: flex;
     gap: 20px;
     justify-content: center;
-    flex-wrap: wrap; /* Para que se adapten en móvil */
+    align-items: center; /* <--- ESTO ES NUEVO: Alineación vertical perfecta */
+    flex-wrap: wrap;
 }
 
+/* Busca .boton-transparente y actualiza el padding: */
 .boton-transparente {
     display: inline-block;
-    padding: 12px 35px;
+    
+    /* CAMBIO AQUÍ: Bajamos de 12px a 10px para compensar el borde */
+    padding: 10px 35px; 
+    
     border: 2px solid white;
     color: white;
     text-decoration: none;
@@ -1639,6 +1645,10 @@ form input:focus, form textarea:focus {
     font-weight: bold;
     font-family: 'Orbitron', sans-serif;
     transition: all 0.3s;
+    
+    /* Asegura que no tenga márgenes extraños */
+    margin: 0; 
+    line-height: 1.6; /* Igualamos la altura de línea por si acaso */
 }
 
 .boton-transparente:hover {
