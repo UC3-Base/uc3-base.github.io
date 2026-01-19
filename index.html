@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UC3-BASE | Ingeniería Espacial</title>
+    <link rel="icon" href="img/LOGO_UC3M-BASE.png" type="image/png">
+    <link rel="icon" href="../img/LOGO_UC3M-BASE.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <meta property="og:title" content="UC3-BASE | Ingeniería Espacial">
+    <meta property="og:description" content="Asociación de estudiantes: CubeSats, Cohetería y Radiofrecuencia en la UC3M.">
+    <meta property="og:image" content="https://https://uc3-base.github.io/img/LOGO_UC3M-BASE.png">
+    <meta property="og:url" content="https://https://uc3-base.github.io/">
+    <meta property="og:type" content="website">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="marca-logo">
+            <img src="img/LOGO_UC3M-BASE.png" alt="Logo" class="logo">
+            <span class="nombre-web">UC3-BASE</span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="menu" id="miMenu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pages/proyectos.html">Proyectos</a></li>
+            <li><a href="pages/equipo.html">Equipo</a></li>
+            <li><a href="pages/contacto.html">Únete</a></li>
+        </ul>
+
+        <div class="nav-derecha"></div>
+    </nav>
+
+    <header class="hero-inicio">
+        <h1>UC3-BASE</h1>
+        <p>Tu laboratorio de radio, satélites y código abierto antes de graduarte.</p>
+        <a href="pages/proyectos.html" class="boton-espacial">VER NUESTRAS MISIONES 🚀</a>
+</header>
+
+    <section>
+        <h2 style="text-align: center; margin-bottom: 40px;">Nuestras Divisiones</h2>
+        
+        <div class="grid-equipo">
+            <div class="tarjeta-miembro">
+                <div class="foto-placeholder">🛰️</div>
+                <h3>CubeSats</h3>
+                <p>Diseño y construcción de pequeños satélites estándares.</p>
+            </div>
+
+            <div class="tarjeta-miembro">
+                <div class="foto-placeholder">📡</div>
+                <h3>Radio</h3>
+                <p>Comunicaciones terrestres y seguimiento de la ISS.</p>
+            </div>
+
+            <div class="tarjeta-miembro">
+                <div class="foto-placeholder">💻</div>
+                <h3>Software</h3>
+                <p>Programación de vuelo y control de misión.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col izquierda">
+                <div class="caja-logos">
+                    <img src="img/LOGO_UC3M-BASE.png" alt="Logo UC3 Base" class="footer-logo">
+                    
+                    <div class="separador-logos"></div>
+                    
+                    <a href="https://www.uc3m.es" target="_blank" class="enlace-uni">
+                        <img src="img/uc3m.webp" alt="Universidad Carlos III de Madrid" class="footer-logo-uni">
+                    </a>
+                </div>
+                
+                <h3>UC3-BASE</h3>
+                <p>Asociación de estudiantes apasionados por el espacio, la radio y la ingeniería.</p>
+            </div>
+
+            <div class="footer-col centro">
+                
+                <a href="https://goo.gl/maps/tu-enlace-aqui" target="_blank" class="dato-contacto">
+                    <div class="icono-tech">
+                        <i class="fas fa-location-dot"></i>
+                    </div>
+                    <span>Av. de la Universidad, 30, 28911 Leganés, Madrid</span>
+                </a>
+
+                <a href="mailto:asociacion.uc3base@uc3m.es" class="dato-contacto">
+                    <div class="icono-tech">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <span>asociacion.uc3base@uc3m.es</span>
+                </a>
+
+                <a href="https://www.linkedin.com/company/uc3base/" target="_blank" class="dato-contacto">
+                    <div class="icono-tech">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <span>Perfil de LinkedIn</span>
+                </a>
+
+            </div>
+
+            <div class="footer-col derecha">
+                <h3>SÍGUENOS</h3>
+                <div class="redes-botones">
+                    <a href="https://instagram.com/uc3base" target="_blank" class="btn-social insta"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/UC3-Base" target="_blank" class="btn-social github"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/company/uc3base" target="_blank" class="btn-social linkedin"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-bar">
+            <p>© 2026 UC3-BASE - Universidad Carlos III de Madrid</p>
+        </div>
+    </footer>
+
+    <script>
+        const botonMenu = document.querySelector('.menu-toggle');
+        const menu = document.getElementById('miMenu');
+
+        botonMenu.addEventListener('click', () => {
+            menu.classList.toggle('activado');
+        });
+    </script> 
+</body>
+</html>

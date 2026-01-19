@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos | UC3-BASE</title>
+    <link rel="icon" href="img/LOGO_UC3M-BASE.png" type="image/png">
+    <link rel="icon" href="../img/LOGO_UC3M-BASE.png" type="image/png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <meta property="og:title" content="UC3-BASE | Ingeniería Espacial">
+    <meta property="og:description" content="Asociación de estudiantes: CubeSats, Cohetería y Radiofrecuencia en la UC3M.">
+    <meta property="og:image" content="https://alfonso-masteraccount.github.io/web-oficial-uc3base/img/LOGO_UC3M-BASE.png">
+    <meta property="og:url" content="https://alfonso-masteraccount.github.io/web-oficial-uc3base/">
+    <meta property="og:type" content="website">
+</head>
+<body>
+
+    <nav>
+        <a href="../index.html" class="marca-logo">
+            <img src="../img/LOGO_UC3M-BASE.png" alt="Logo" class="logo">
+            <span class="nombre-web">UC3-BASE</span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="menu" id="miMenu">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="equipo.html">Equipo</a></li>
+            <li><a href="contacto.html">Únete</a></li>
+        </ul>
+
+        <div class="nav-derecha"></div>
+    </nav>
+
+    <header class="header-equipo">
+        <h1>PROYECTOS ACTIVOS</h1>
+        <p>Ingeniería aplicada: Desde tierra hasta la órbita.</p>
+    </header>
+
+    <main class="contenedor-paneles">
+
+        <article class="proyecto-card">
+            
+            <div class="proyecto-visual">
+                <img src="../img/Antena.jpg" alt="Diseño Antena Yagi" class="img-proyecto">
+                <div class="overlay-tech">
+                    <span class="status-tag">EN CONSTRUCCIÓN</span>
+                </div>
+            </div>
+
+            <div class="proyecto-info">
+                <div class="proyecto-header">
+                    <i class="fas fa-broadcast-tower icono-titulo"></i>
+                    <h2>ESTACIÓN TERRENA</h2>
+                </div>
+                
+                <p class="intro-texto">
+                    Diseño y construcción de una estación de seguimiento automatizada para satélites meteorológicos (NOAA/Meteor) y cubestats universitarios en bandas VHF/UHF.
+                </p>
+
+                <div class="acordeon-container">
+                    
+                    <div class="item-acordeon">
+                        <button class="btn-acordeon">
+                            <span>¿QUÉ BUSCAMOS?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="contenido-acordeon">
+                            <p>Nuestro objetivo principal es establecer un enlace estable con satélites de órbita baja (LEO). Buscamos decodificar imágenes meteorológicas en tiempo real y recibir telemetría de otros equipos universitarios, sirviendo como nodo en la red global de estaciones terrestres (SatNOGS).</p>
+                        </div>
+                    </div>
+
+                    <div class="item-acordeon">
+                        <button class="btn-acordeon">
+                            <span>¿CÓMO LO HACEMOS?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="contenido-acordeon">
+                            <ul class="lista-tech">
+                                <li><strong>Antenas:</strong> Diseño Yagi-Uda cruzada para polarización circular.</li>
+                                <li><strong>Rotores:</strong> Sistema de seguimiento Azimut/Elevación controlado por Arduino.</li>
+                                <li><strong>SDR:</strong> Procesado de señal mediante RTL-SDR y GNU Radio.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div> </div>
+        </article>
+
+        <article class="proyecto-card reverso">
+            
+            <div class="proyecto-visual">
+                <img src="../img/CubeSat2U.webp" alt="Diseño CubeSat" class="img-proyecto">
+                <div class="overlay-tech">
+                    <span class="status-tag blue">FASE DE DISEÑO</span>
+                </div>
+            </div>
+
+            <div class="proyecto-info">
+                <div class="proyecto-header">
+                    <i class="fas fa-satellite icono-titulo"></i>
+                    <h2>CUBESAT 1U</h2>
+                </div>
+                
+                <p class="intro-texto">
+                    Desarrollo conceptual y simulación de un nanosatélite estándar 1U (10x10x10cm). El primer paso hacia nuestra propia misión espacial.
+                </p>
+
+                <div class="acordeon-container">
+                    
+                    <div class="item-acordeon">
+                        <button class="btn-acordeon">
+                            <span>MISIÓN & OBJETIVOS</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="contenido-acordeon">
+                            <p>Validar la electrónica de vuelo (OBC) desarrollada por la asociación y probar un sistema de comunicaciones experimental de baja potencia. El diseño prioriza la modularidad y el bajo coste usando componentes COTS (Commercial Off-The-Shelf).</p>
+                        </div>
+                    </div>
+
+                    <div class="item-acordeon">
+                        <button class="btn-acordeon">
+                            <span>ESPECIFICACIONES</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="contenido-acordeon">
+                            <ul class="lista-tech">
+                                <li><strong>Dimensiones:</strong> 10 x 10 x 10 cm (1U).</li>
+                                <li><strong>Peso:</strong> < 1.33 kg.</li>
+                                <li><strong>Energía:</strong> Paneles solares desplegables y gestión por EPS inteligente.</li>
+                                <li><strong>Comunicaciones:</strong> Transceptor UHF con protocolo AX.25.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+
+    </main>
+    
+    <script>
+        const acordeones = document.querySelectorAll('.btn-acordeon');
+
+        acordeones.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Alternar la clase activo en el botón
+                btn.classList.toggle('activo');
+                
+                // Encontrar el contenido que va justo después del botón
+                const contenido = btn.nextElementSibling;
+                
+                if (btn.classList.contains('activo')) {
+                    // Si está activo, le damos altura (lo abrimos)
+                    contenido.style.maxHeight = contenido.scrollHeight + "px";
+                } else {
+                    // Si no, altura cero (lo cerramos)
+                    contenido.style.maxHeight = 0;
+                }
+            });
+        });
+    </script>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col izquierda">
+                <div class="caja-logos">
+                    <img src="../img/LOGO_UC3M-BASE.png" alt="Logo UC3 Base" class="footer-logo">
+                    <div class="separador-logos"></div>
+                    
+                    <a href="https://www.uc3m.es" target="_blank" class="enlace-uni">
+                        <img src="../img/uc3m.webp" alt="Universidad Carlos III de Madrid" class="footer-logo-uni">
+                    </a>
+                </div>
+                
+                <h3>UC3-BASE</h3>
+                <p>Asociación de estudiantes apasionados por el espacio, la radio y la ingeniería.</p>
+            </div>
+
+            <div class="footer-col centro">
+                
+                <a href="https://goo.gl/maps/tu-enlace-aqui" target="_blank" class="dato-contacto">
+                    <div class="icono-tech">
+                        <i class="fas fa-location-dot"></i>
+                    </div>
+                    <span>Av. de la Universidad, 30, 28911 Leganés, Madrid</span>
+                </a>
+
+                <a href="mailto:asociacion.uc3base@uc3m.es" class="dato-contacto">
+                    <div class="icono-tech">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <span>asociacion.uc3base@uc3m.es</span>
+                </a>
+
+                <a href="https://www.linkedin.com/company/uc3base/" target="_blank" class="dato-contacto">
+                    <div class="icono-tech">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <span>Perfil de LinkedIn</span>
+                </a>
+
+            </div>
+
+            <div class="footer-col derecha">
+                <h3>SÍGUENOS</h3>
+                <div class="redes-botones">
+                    <a href="https://instagram.com/uc3base" target="_blank" class="btn-social insta"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/UC3-Base" target="_blank" class="btn-social github"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/company/uc3base" target="_blank" class="btn-social linkedin"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-bar">
+            <p>© 2026 UC3-BASE - Universidad Carlos III de Madrid</p>
+        </div>
+    </footer>
+
+    <script>
+        const botonMenu = document.querySelector('.menu-toggle');
+        const menu = document.getElementById('miMenu');
+
+        botonMenu.addEventListener('click', () => {
+            menu.classList.toggle('activado');
+        });
+    </script>
+</body>
+</html>
