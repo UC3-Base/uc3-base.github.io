@@ -43,31 +43,47 @@
 
     <section>
         <div class="contenedor-formulario">
-            <form action="https://formspree.io/f/TU_CODIGO_AQUI" method="POST">
+            <form action="https://formsubmit.co/asociacion.uc3base@uc3m.es" method="POST" class="formulario-base">
                 
-                <label>Nombre y Apellidos <span class="asterisco">*</span></label>
+                <input type="hidden" name="_next" value="https://uc3-base.github.io/pages/contacto.html">
+                <input type="hidden" name="_subject" value="🚀 Nuevo mensaje web: Alguien quiere unirse">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+
                 <div class="fila-doble">
-                    <input type="text" name="nombre" placeholder="Nombre" required>
-                    <input type="text" name="apellidos" placeholder="Apellidos" required>
+                    <div>
+                        <label for="nombre">Nombre <span class="asterisco">*</span></label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div>
+                        <label for="apellidos">Apellidos <span class="asterisco">*</span></label>
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" required>
+                    </div>
                 </div>
 
-                <label>Correo electrónico <span class="asterisco">*</span></label>
-                <input type="email" name="email" placeholder="tucorreo@alumnos.uc3m.es" required>
+                <label for="email">Correo Electrónico <span class="asterisco">*</span></label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@uc3m.es" required>
 
-                <label>¿Qué estudias?</label>
-                <input type="text" name="estudios" placeholder="Ej: Ingeniería Aeroespacial, Teleco...">
-
-                <label>¿Qué área te interesa?</label>
+                <label>¿Qué perfil te interesa más?</label>
                 <div class="grupo-checkbox">
-                    <label class="opcion"><input type="checkbox" name="interes" value="Estacion"> Estación Terrena</label>
-                    <label class="opcion"><input type="checkbox" name="interes" value="Modulacion"> Modulación / Radio</label>
-                    <label class="opcion"><input type="checkbox" name="interes" value="Gestion"> Gestión y RRSS</label>
+                    <label class="opcion">
+                        <input type="checkbox" name="interes[]" value="Electronica_RF"> Electrónica & Radiofrecuencia
+                    </label>
+                    <label class="opcion">
+                        <input type="checkbox" name="interes[]" value="Software_SDR"> Software & SDR
+                    </label>
+                    <label class="opcion">
+                        <input type="checkbox" name="interes[]" value="Mecanica_Estructuras"> Mecánica & Estructuras
+                    </label>
+                    <label class="opcion">
+                        <input type="checkbox" name="interes[]" value="Gestion_Marketing"> Gestión & Marketing
+                    </label>
                 </div>
 
-                <label>Cuéntanos por qué quieres unirte</label>
-                <textarea name="mensaje" rows="5"></textarea>
+                <label for="mensaje">Cuéntanos sobre ti <span class="asterisco">*</span></label>
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿Qué estudias? ¿Tienes experiencia previa? ¿Por qué quieres unirte?" required></textarea>
 
-                <button type="submit" class="boton-full">ENVIAR</button>
+                <button type="submit" class="boton-full">ENVIAR SOLICITUD</button>
             </form>
         </div>
     </section>
