@@ -1809,3 +1809,50 @@ form input:focus, form textarea:focus {
     .banner-datos { flex-direction: column; gap: 50px; }
     .seccion-final h2 { font-size: 2rem; }
 }
+
+/* --- AJUSTES SPONSORS INTERACTIVOS --- */
+
+.logos-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Espacio entre logos */
+    flex-wrap: wrap;
+}
+
+.enlace-sponsor {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.enlace-sponsor:hover {
+    transform: scale(1.1); /* Efecto zoom al pasar el ratón */
+    cursor: pointer;
+}
+
+/* Ajuste general de logos */
+.logo-sponsor {
+    height: 60px; /* Altura estándar */
+    width: auto;
+    opacity: 0.5;
+    filter: grayscale(100%); /* Blanco y negro por defecto */
+    transition: all 0.3s ease;
+}
+
+/* Al pasar el ratón por el ENLACE, el logo se ilumina */
+.enlace-sponsor:hover .logo-sponsor {
+    opacity: 1;
+    filter: grayscale(0%); /* Recupera su color original */
+}
+
+/* AJUSTE ESPECÍFICO PARA PUNTO (Porque tiene fondo cuadrado) */
+.logo-punto {
+    border-radius: 10px; /* Redondeamos las esquinas para que quede moderno */
+    height: 55px; /* Un pelín más pequeño visualmente para compensar el bloque */
+}
+
+/* AJUSTE PARA GREMA */
+.logo-grema {
+    border-radius: 8px;
+    height: 50px; /* Un poco más pequeño para compensar que es muy ancho */
+}
