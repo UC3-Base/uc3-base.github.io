@@ -1810,13 +1810,13 @@ form input:focus, form textarea:focus {
     .seccion-final h2 { font-size: 2rem; }
 }
 
-/* --- AJUSTES SPONSORS INTERACTIVOS --- */
+/* --- AJUSTES SPONSORS PRO (VISIBILIDAD MEJORADA) --- */
 
 .logos-row {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px; /* Espacio entre logos */
+    gap: 40px;
     flex-wrap: wrap;
 }
 
@@ -1826,33 +1826,55 @@ form input:focus, form textarea:focus {
 }
 
 .enlace-sponsor:hover {
-    transform: scale(1.1); /* Efecto zoom al pasar el ratón */
+    transform: scale(1.1); /* Zoom al pasar el ratón */
     cursor: pointer;
 }
 
-/* Ajuste general de logos */
+/* --- ESTILO GENERAL DE LOGOS --- */
 .logo-sponsor {
-    height: 60px; /* Altura estándar */
+    height: 60px;
     width: auto;
-    opacity: 0.5;
+    /* CAMBIO: Subimos visibilidad (antes 0.5) */
+    opacity: 0.8; 
     filter: grayscale(100%); /* Blanco y negro por defecto */
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 }
 
-/* Al pasar el ratón por el ENLACE, el logo se ilumina */
+/* Al pasar el ratón, recuperan su color y brillo total */
 .enlace-sponsor:hover .logo-sponsor {
     opacity: 1;
-    filter: grayscale(0%); /* Recupera su color original */
+    filter: grayscale(0%) invert(0) brightness(1); /* Resetea todos los filtros */
 }
 
-/* AJUSTE ESPECÍFICO PARA PUNTO (Porque tiene fondo cuadrado) */
+/* --- CORRECCIONES ESPECÍFICAS --- */
+
+/* 1. ST3LLAR: Convertir texto oscuro a BLANCO PURO */
+.logo-dark-text {
+    /* Esto vuelve el logo totalmente blanco */
+    filter: brightness(0) invert(1) !important; 
+}
+/* Al hacer hover en St3llar, mantenemos el blanco o invertimos para ver el original? 
+   Como el original es azul oscuro, mejor dejarlo blanco brillante siempre o invertirlo parcialmente.
+   Vamos a dejar que recupere su color original con un poco de brillo extra */
+.enlace-sponsor:hover .logo-dark-text {
+    filter: invert(0) brightness(1.5) !important; /* Recupera el azul pero más brillante */
+}
+
+
+/* 2. PUNTO: Solo redondear bordes */
 .logo-punto {
-    border-radius: 10px; /* Redondeamos las esquinas para que quede moderno */
-    height: 55px; /* Un pelín más pequeño visualmente para compensar el bloque */
+    border-radius: 12px;
+    height: 55px;
 }
 
-/* AJUSTE PARA GREMA */
+/* 3. GREMA: Invertir para que el fondo gris se haga oscuro y letras blancas */
 .logo-grema {
     border-radius: 8px;
-    height: 50px; /* Un poco más pequeño para compensar que es muy ancho */
+    height: 50px;
+    /* Invertimos colores: Fondo gris -> Oscuro, Letras negras -> Blancas */
+    filter: invert(1) grayscale(100%) !important; 
+}
+/* Al hacer hover en GREMA, volvemos a la normalidad */
+.enlace-sponsor:hover .logo-grema {
+    filter: invert(0) grayscale(0%) !important;
 }
