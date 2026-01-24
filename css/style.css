@@ -1969,3 +1969,12 @@ FORZAMOS que se mantenga invertido (letras blancas)
     height: 400px; /* Altura fija para uniformidad */
     margin: 0; /* Quitar márgenes extraños */
 }
+
+/* --- AJUSTE PARA EQUIPOS PEQUEÑOS (DIRECTIVA Y HONORÍFICOS) --- */
+
+/* Solo aplicamos centrado en PC para que queden elegantes */
+@media (min-width: 768px) {
+    .track-centrado {
+        justify-content: center !important; /* Fuerza el centro */
+    }
+}
