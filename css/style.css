@@ -1667,61 +1667,72 @@ form input:focus, form textarea:focus {
     z-index: 1;
 }
 
-/* 2. LOS 4 PILARES (Grid Tecnológico 2x2) */
+/* 2. LOS 4 PILARES (Bloques Interactivos Compactos) */
 .pilares-container {
-    display: grid; /* Usamos Grid en lugar de Flex */
-    /* Esto crea 2 columnas de igual tamaño automáticamente */
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 30px;
-    padding: 80px 20px;
+    display: flex; /* Volvemos a Flexbox para ponerlos en fila */
+    justify-content: center; /* Centrados horizontalmente */
+    flex-wrap: wrap; /* Si no caben, que bajen de línea (importante para tablet) */
+    gap: 25px; /* Un poco menos de separación para que queden compactos */
+    padding: 60px 20px; /* Menos relleno vertical */
     background: #000;
-    
-    /* Centramos el bloque y limitamos el ancho para que se vea compacto */
-    max-width: 1000px;
+    max-width: 1200px; /* Ancho máximo para que no se desmadren en pantallas ultra-anchas */
     margin: 0 auto; 
 }
 
 .pilar-card {
     background: rgba(15, 15, 15, 0.8);
     border: 1px solid #333;
-    padding: 40px 30px;
+    padding: 30px 20px; /* Tarjetas más delgadas internamente */
     text-align: center;
-    border-radius: 12px;
+    border-radius: 10px;
     
-    /* Quitamos el ancho fijo, ahora ocupan todo el hueco de la celda */
-    width: 100%; 
-    height: 100%; /* Para que todas las tarjetas tengan la misma altura visual */
+    /* CLAVE: Ancho fijo y pequeño */
+    width: 260px;
+    /* Altura mínima para que queden alineadas visualmente si el texto varía poco */
+    min-height: 320px; 
     
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: flex-start; /* Alineación superior */
 }
 
+/* INTERACTIVIDAD (El efecto "pop" al pasar el ratón) */
 .pilar-card:hover {
-    transform: translateY(-5px);
-    border-color: #c21c24;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transform: translateY(-7px); /* Suben un poquito */
+    border-color: #c21c24; /* Borde rojo */
+    /* Sombra roja sutil para dar efecto de energía */
+    box-shadow: 0 10px 25px -5px rgba(194, 28, 36, 0.3);
 }
 
 .icono-pilar {
-    font-size: 3.5rem;
+    font-size: 3rem; /* Iconos un poco más pequeños (antes 3.5rem) */
     color: #c21c24;
-    margin-bottom: 25px;
-    filter: drop-shadow(0 0 8px rgba(194, 28, 36, 0.3));
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 5px rgba(194, 28, 36, 0.3));
 }
 
 .pilar-card h3 {
     font-family: 'Orbitron', sans-serif;
     margin-bottom: 15px;
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.2rem; /* Títulos más pequeños */
 }
 
 .pilar-card p {
     color: #b0b0b0;
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 0.9rem; /* Texto más pequeño */
+    line-height: 1.5;
+    flex-grow: 1; /* Para que el texto ocupe el espacio disponible */
+}
+
+/* --- AJUSTE RESPONSIVE (Móvil) --- */
+@media (max-width: 768px) {
+    .pilar-card {
+        width: 100%; /* En móvil que ocupen todo el ancho disponible */
+        max-width: 350px; /* Pero sin pasarse */
+        min-height: auto; /* Altura automática en móvil */
+    }
 }
 
 /* --- AJUSTE RESPONSIVE PARA EL GRID --- */
