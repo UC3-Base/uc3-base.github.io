@@ -1667,63 +1667,78 @@ form input:focus, form textarea:focus {
     z-index: 1;
 }
 
-/* 2. LOS 4 PILARES (Bloques Interactivos Compactos) */
+/* 2. LOS 4 PILARES (Grid 2x2 Compacto) */
 .pilares-container {
-    display: flex; /* Volvemos a Flexbox para ponerlos en fila */
-    justify-content: center; /* Centrados horizontalmente */
-    flex-wrap: wrap; /* Si no caben, que bajen de línea (importante para tablet) */
-    gap: 25px; /* Un poco menos de separación para que queden compactos */
-    padding: 60px 20px; /* Menos relleno vertical */
+    display: grid;
+    /* Forzamos 2 columnas idénticas */
+    grid-template-columns: repeat(2, 1fr);
+    /* Espacio entre tarjetas */
+    gap: 20px; 
+    
+    padding: 60px 20px;
     background: #000;
-    max-width: 1200px; /* Ancho máximo para que no se desmadren en pantallas ultra-anchas */
+    
+    /* RESTRICCIÓN DE ANCHO: Esto hace que el bloque sea más pequeño y centrado */
+    max-width: 900px; 
     margin: 0 auto; 
 }
 
 .pilar-card {
     background: rgba(15, 15, 15, 0.8);
     border: 1px solid #333;
-    padding: 30px 20px; /* Tarjetas más delgadas internamente */
+    
+    /* Relleno más ajustado para reducir tamaño total */
+    padding: 25px; 
+    
     text-align: center;
-    border-radius: 10px;
+    border-radius: 12px;
     
-    /* CLAVE: Ancho fijo y pequeño */
-    width: 260px;
-    /* Altura mínima para que queden alineadas visualmente si el texto varía poco */
-    min-height: 320px; 
+    /* Altura controlada */
+    min-height: 250px; 
     
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Alineación superior */
+    align-items: center;
+    justify-content: center; /* Centra el contenido verticalmente */
 }
 
-/* INTERACTIVIDAD (El efecto "pop" al pasar el ratón) */
+/* EFECTO INTERACTIVO */
 .pilar-card:hover {
-    transform: translateY(-7px); /* Suben un poquito */
-    border-color: #c21c24; /* Borde rojo */
-    /* Sombra roja sutil para dar efecto de energía */
-    box-shadow: 0 10px 25px -5px rgba(194, 28, 36, 0.3);
+    transform: translateY(-5px);
+    border-color: #c21c24;
+    background: rgba(25, 25, 25, 0.95); /* Se aclara un poco el fondo */
+    box-shadow: 0 5px 20px rgba(194, 28, 36, 0.2);
 }
 
 .icono-pilar {
-    font-size: 3rem; /* Iconos un poco más pequeños (antes 3.5rem) */
+    font-size: 2.5rem; /* Icono más discreto (antes 3.5rem) */
     color: #c21c24;
-    margin-bottom: 20px;
-    filter: drop-shadow(0 0 5px rgba(194, 28, 36, 0.3));
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 5px rgba(194, 28, 36, 0.4));
 }
 
 .pilar-card h3 {
     font-family: 'Orbitron', sans-serif;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: white;
-    font-size: 1.2rem; /* Títulos más pequeños */
+    font-size: 1.1rem; /* Título más fino */
+    letter-spacing: 1px;
 }
 
 .pilar-card p {
     color: #b0b0b0;
-    font-size: 0.9rem; /* Texto más pequeño */
+    font-size: 0.85rem; /* Texto descriptivo más pequeño */
     line-height: 1.5;
-    flex-grow: 1; /* Para que el texto ocupe el espacio disponible */
+    max-width: 300px; /* Evita que las líneas de texto sean muy largas */
+}
+
+/* --- RESPONSIVE: En móviles pasamos a 1 columna --- */
+@media (max-width: 700px) {
+    .pilares-container {
+        grid-template-columns: 1fr; /* 1 sola columna */
+        max-width: 400px; /* Ancho máximo para el móvil */
+    }
 }
 
 /* --- AJUSTE RESPONSIVE (Móvil) --- */
