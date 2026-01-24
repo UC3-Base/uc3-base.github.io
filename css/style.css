@@ -1878,3 +1878,15 @@ form input:focus, form textarea:focus {
 .enlace-sponsor:hover .logo-grema {
     filter: invert(0) grayscale(0%) !important;
 }
+
+/* --- CORRECCIÓN FINAL GREMA HOVER --- */
+
+/* Cuando pasamos el ratón por el enlace de GREMA, 
+FORZAMOS que se mantenga invertido (letras blancas) 
+   y subimos el brillo un poco para notar que es interactivo */
+
+.enlace-sponsor:hover .logo-grema {
+    /* Mantenemos invert(1) para que el fondo siga oscuro y letras blancas */
+    filter: invert(1) grayscale(100%) brightness(1.2) !important;
+    opacity: 1;
+}
